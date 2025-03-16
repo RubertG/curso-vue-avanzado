@@ -1,7 +1,9 @@
 <script setup>
 import { useUserSessionStore } from '@/stores/user/useUserSession'
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const userSessionStore = useUserSessionStore()
 const email = ref('')
 const password = ref('')
@@ -14,6 +16,7 @@ const login = () => {
   }
 
   userSessionStore.setUser(email.value)
+  router.replace({ name: 'profile' })
 }
 </script>
 
