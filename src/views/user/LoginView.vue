@@ -10,7 +10,7 @@ const password = ref('')
 
 const login = () => {
   if (!email.value || !password.value) {
-    alert('Por favor, rellena todos los campos')
+    alert('Por favor, rellena todos los campos.')
 
     return
   }
